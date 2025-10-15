@@ -11,21 +11,22 @@
   <meta property="og:url" content="https://kangenwaterkopen.nl/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="nl_NL">
-  <meta name="theme-color" content="#0b0f13">
+  <meta name="theme-color" content="#0ea5e9">
 
   <style>
     :root{
-      --bg: #0b0f13;
-      --surface: #10161c;
-      --card: #121922;
-      --border: #1c2631;
-      --fg: #e8eef3;
-      --muted:#a8b3bd;
-      --accent:#58c4ff;
-      --accent-2:#20a4f3;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 18px;
-      --maxw: 980px;
+      /* LIGHT THEME */
+      --bg:#f6f7f9;
+      --surface:#ffffff;
+      --card:#ffffff;
+      --border:#e6e9ef;
+      --fg:#1c2430;
+      --muted:#647082;
+      --accent:#0ea5e9;      /* cyan-500 */
+      --accent-2:#0284c7;    /* cyan-700 */
+      --shadow:0 10px 24px rgba(19,36,68,.06);
+      --radius:18px;
+      --maxw:980px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
@@ -34,40 +35,70 @@
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
       color:var(--fg);
       background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(40,120,255,.12), transparent 60%),
-        radial-gradient(1400px 700px at 120% 10%, rgba(120,210,255,.10), transparent 60%),
+        radial-gradient(1000px 500px at 10% -10%, rgba(14,165,233,.08), transparent 60%),
+        radial-gradient(1200px 600px at 110% 0%, rgba(2,132,199,.06), transparent 65%),
         var(--bg);
       line-height:1.65;
     }
-    /* Topbar */
+
+    /* TOPBAR (compact + hamburger on mobile) */
     .topbar{
-      position:sticky;top:0;z-index:50;
+      position:sticky;top:0;z-index:60;
+      background:rgba(255,255,255,.85);
       backdrop-filter:saturate(140%) blur(8px);
-      background:linear-gradient(to bottom, rgba(10,14,18,.85), rgba(10,14,18,.6));
       border-bottom:1px solid var(--border);
     }
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:14px}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:10px}
     .brand{font-weight:800;letter-spacing:.2px}
-    .nav{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}
-    .nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
-    .nav a:hover{color:var(--fg);background:rgba(255,255,255,.05)}
-    /* Hero */
-    .hero{max-width:var(--maxw);margin:34px auto 10px;padding:0 20px}
+    .spacer{flex:1}
+    .nav{display:flex;gap:10px}
+    .nav a{
+      color:var(--muted);text-decoration:none;
+      padding:8px 10px;border-radius:10px;font-size:14px
+    }
+    .nav a:hover{color:var(--fg);background:#f2f5f9}
+
+    /* Hamburger */
+    .menu-btn{
+      display:none;border:1px solid var(--border);background:var(--surface);
+      height:36px;width:40px;border-radius:10px;align-items:center;justify-content:center;
+      box-shadow:var(--shadow)
+    }
+    .menu-btn span{
+      display:block;width:18px;height:2px;background:var(--fg);position:relative
+    }
+    .menu-btn span::before,.menu-btn span::after{
+      content:"";position:absolute;left:0;width:18px;height:2px;background:var(--fg)
+    }
+    .menu-btn span::before{top:-6px}
+    .menu-btn span::after{top:6px}
+
+    /* MOBILE dropdown */
+    .mobile-panel{
+      display:none;background:var(--surface);border-bottom:1px solid var(--border)
+    }
+    .mobile-panel.open{display:block}
+    .mobile-panel .mwrap{max-width:var(--maxw);margin:0 auto;padding:10px 16px;display:grid;gap:6px}
+    .mobile-panel a{color:var(--fg);text-decoration:none;padding:10px 8px;border-radius:10px}
+    .mobile-panel a:active{background:#f2f5f9}
+
+    /* HERO */
+    .hero{max-width:var(--maxw);margin:26px auto 10px;padding:0 16px}
     .eyebrow{color:var(--muted);font-size:14px;letter-spacing:.2px;margin:0 0 6px}
-    h1{font-size:clamp(30px,5vw,46px);margin:6px 0 10px;line-height:1.15}
+    h1{font-size:clamp(28px,5vw,44px);margin:6px 0 10px;line-height:1.15}
     .subtitle{color:var(--muted);margin:0 0 16px}
     .badges{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
-    .badge{background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted);
+    .badge{background:#f2f6fb;border:1px solid var(--border);color:#3f4a5a;
       padding:6px 10px;border-radius:999px;font-size:13px}
     .hero-img{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
     .hero-img img{display:block;width:100%;height:auto}
-    /* Cards grid */
-    .grid{max-width:var(--maxw);margin:10px auto 60px;padding:0 20px;display:grid;gap:18px}
+
+    /* GRID CARDS */
+    .grid{max-width:var(--maxw);margin:10px auto 60px;padding:0 16px;display:grid;gap:18px}
     @media(min-width:900px){ .grid{grid-template-columns:1fr 1fr} }
     .card{
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
-      border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
-      padding:20px;
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:20px
     }
     .card h2{font-size:clamp(20px,3vw,26px);margin:0 0 10px}
     .card p{margin:10px 0}
@@ -75,24 +106,26 @@
     .img img{display:block;width:100%;height:auto}
     ul{margin:10px 0 4px 18px}
     li{margin:6px 0}
-    /* Full-width CTA */
+
+    /* CTA */
     .cta-card{
-      grid-column:1/-1;
-      background:linear-gradient(180deg, rgba(35,45,60,.7), rgba(20,26,34,.9));
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:26px;
-      text-align:center
+      grid-column:1/-1;background:linear-gradient(180deg,#eef7ff,#ffffff);
+      border:1px solid var(--border);border-radius:var(--radius);padding:26px;text-align:center
     }
     .cta-btn{
-      display:inline-block;margin-top:12px;
-      background:linear-gradient(180deg,var(--accent),var(--accent-2));
-      color:#071119;text-decoration:none;font-weight:800;
-      border-radius:12px;padding:14px 18px;box-shadow:0 10px 22px rgba(32,164,243,.25)
+      display:inline-block;margin-top:12px;background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      color:#071119;text-decoration:none;font-weight:800;border-radius:12px;padding:14px 18px;box-shadow:0 10px 22px rgba(2,132,199,.18)
     }
     .cta-btn:hover{transform:translateY(-1px)}
-    footer{max-width:var(--maxw);margin:0 auto 60px;padding:0 20px;color:var(--muted);font-size:14px}
+    footer{max-width:var(--maxw);margin:0 auto 60px;padding:0 16px;color:var(--muted);font-size:14px}
     .hr{height:1px;background:var(--border);margin:26px 0}
+
+    /* MOBILE: shrink topbar fonts and show hamburger */
+    @media (max-width: 760px){
+      .nav{display:none}
+      .menu-btn{display:flex}
+      .brand{font-size:15px}
+    }
   </style>
 
   <!-- Structured Data -->
@@ -113,10 +146,11 @@
 <body>
 
   <!-- Topbar -->
-  <div class="topbar">
+  <div class="topbar" role="navigation" aria-label="Hoofdnavigatie">
     <div class="wrap">
       <div class="brand">KangenWaterKopen.nl</div>
-      <nav class="nav">
+      <div class="spacer"></div>
+      <nav class="nav" aria-label="Desktop menu">
         <a href="#begin">Hoe het begon</a>
         <a href="#lessen">16 jaar later</a>
         <a href="#prijs">Prijs</a>
@@ -124,6 +158,17 @@
         <a href="#scepsis">Scepsis</a>
         <a href="#cta">Zelf ontdekken</a>
       </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu openen" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-panel" id="mobilePanel" aria-label="Mobiel menu">
+    <div class="mwrap">
+      <a href="#begin">Hoe het begon</a>
+      <a href="#lessen">16 jaar later</a>
+      <a href="#prijs">Prijs</a>
+      <a href="#marktplaats">Marktplaats?</a>
+      <a href="#scepsis">Scepsis</a>
+      <a href="#cta">Zelf ontdekken</a>
     </div>
   </div>
 
@@ -131,7 +176,12 @@
   <section class="hero">
     <p class="eyebrow">Persoonlijke getuigenis · sinds 2009</p>
     <h1>Mijn ervaring met Kangen Water kopen in Nederland</h1>
-    <p class="subtitle">In 2009 kwam ik tijdens een kite-surftrip in de Verenigde Staten voor het eerst in aanraking met Kangen water. Als fanatiek sporter merkte ik vrijwel direct het verschil: meer kracht, meer uithoudingsvermogen, sneller herstel. Dat moment overtuigde me – ik besloot een van de eerste machines in Nederland (en waarschijnlijk zelfs in Europa) te kopen. Nu, 16 jaar later, staat dezelfde machine nog steeds in mijn keuken en doet hij dagelijks zijn werk.</p>
+    <p class="subtitle">
+      In 2009 kwam ik tijdens een kite-surftrip in de Verenigde Staten voor het eerst in aanraking met Kangen water.
+      Als fanatiek sporter merkte ik vrijwel direct het verschil: meer kracht, meer uithoudingsvermogen, sneller herstel.
+      Dat moment overtuigde me – ik besloot een van de eerste machines in Nederland (en waarschijnlijk zelfs in Europa) te kopen.
+      Nu, 16 jaar later, staat dezelfde machine nog steeds in mijn keuken en doet hij dagelijks zijn werk.
+    </p>
     <div class="badges">
       <span class="badge">200+ gebruikers in mijn netwerk</span>
       <span class="badge">16 jaar persoonlijke ervaring</span>
@@ -145,7 +195,6 @@
   <!-- Cards -->
   <section class="grid">
 
-    <!-- Card 1 -->
     <article id="begin" class="card">
       <h2>Een Kangen water apparaat kopen – hoe het begon</h2>
       <div class="img"><img src="/assets/2-hoehetbegon.png" alt="Kitesurf-uitrusting op het strand met een fles water als symbool voor de eerste ervaring in 2009."></div>
@@ -153,7 +202,6 @@
       <p>Al snel wilden vrienden en kennissen het water ook proeven. Ik begon demo’s te geven, organiseerde info-avonden en kwam in gesprek met andere gezondheidspioniers. Wat begon als een persoonlijke aankoop groeide uit tot een beweging.</p>
     </article>
 
-    <!-- Card 2 -->
     <article id="lessen" class="card">
       <h2>16 jaar later: wat ik heb geleerd</h2>
       <div class="img"><img src="/assets/3-watikhebgeleerd.png" alt="Detail van een waterapparaat en glas water; focus op jarenlange dagelijkse inzet."></div>
@@ -166,7 +214,6 @@
       <p>Onderweg sprak ik veel professionals in de natuurlijke en holistische hoek. We keken niet naar “wondermiddelen”, maar naar kleine, dagelijkse verbeteringen: zachtere thee en koffie, groente die zichtbaar beter schoon wordt, en vooral het gevoel van goede hydratatie in training en herstel.</p>
     </article>
 
-    <!-- Card 3 -->
     <article class="card">
       <h2>Van aankoop naar netwerk & samenwerking</h2>
       <div class="img"><img src="/assets/4-netwerkensamenwerking.png" alt="Kleine groep mensen aan een houten tafel met glazen water in warm daglicht."></div>
@@ -174,7 +221,6 @@
       <p>Het ging nooit om wondermiddelen, maar om kleine, dagelijkse verbeteringen: smaak, hydratatie, herstel en gemak in de keuken.</p>
     </article>
 
-    <!-- Card 4 -->
     <article id="prijs" class="card">
       <h2>De prijs van een Kangen water machine</h2>
       <div class="img"><img src="/assets/5-prijsvaneenkangenwatermachine.png" alt="Stapel muntjes naast een glas water als symbool voor investering en waarde over tijd."></div>
@@ -182,7 +228,6 @@
       <p>Mijn eigen machine draait na 16 jaar nog steeds. Uitgesmeerd over jaren dagelijks gebruik wordt de investering verrassend betaalbaar.</p>
     </article>
 
-    <!-- Card 5 -->
     <article id="marktplaats" class="card">
       <h2>Kangen water bestellen of tweedehands kopen?</h2>
       <div class="img"><img src="/assets/6-bestellenoftweedehandskopen.png" alt="Vergelijking tussen tweedehands en nieuw product; focus op garantie en betrouwbaarheid."></div>
@@ -190,7 +235,6 @@
       <p>Bestellen via de officiële kanalen betekent zekerheid: fabrieksgarantie, service en authenticiteit.</p>
     </article>
 
-    <!-- Card 6 -->
     <article id="scepsis" class="card">
       <h2>Over scepsis, “kwakzalverij” en negatieve verhalen</h2>
       <div class="img"><img src="/assets/7-waaromikditverhaaldeel.png" alt="Iemand leest een artikel op laptop met glas water ernaast; bedachtzame sfeer."></div>
@@ -199,7 +243,6 @@
       <p>De ervaring zelf is leidend. Wie het water langere tijd drinkt, merkt het verschil.</p>
     </article>
 
-    <!-- Card 7 -->
     <article class="card">
       <h2>Waarom ik dit verhaal deel</h2>
       <div class="img"><img src="/assets/7-waaromikditverhaaldeel.png" alt="Iemand leest een artikel op laptop met glas water ernaast; bedachtzame sfeer."></div>
@@ -207,7 +250,6 @@
       <p>Niet om te overtuigen met grote claims, maar om een authentieke stem toe te voegen aan het gesprek — gebaseerd op 16 jaar gebruik.</p>
     </article>
 
-    <!-- CTA (full width) -->
     <article id="cta" class="cta-card">
       <h2>Klaar om zelf te ontdekken?</h2>
       <div class="img" style="max-width:780px;margin:12px auto">
@@ -225,6 +267,18 @@
   </footer>
 
   <script>
+    // Mobile menu toggle
+    const btn = document.getElementById('menuBtn');
+    const panel = document.getElementById('mobilePanel');
+    btn.addEventListener('click', () => {
+      const open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    // Close mobile menu after clicking a link
+    panel.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click',()=>{ panel.classList.remove('open'); btn.setAttribute('aria-expanded','false'); });
+    });
+    // Footer year
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
