@@ -1,267 +1,230 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kangen Water Kopen — Ervaring, Prijs & Advies</title>
-  <meta name="description" content="Sinds 2009 drink ik Kangen water. Op deze pagina deel ik mijn ervaring, prijzen van de machines en hoe jij slim kunt starten (nieuw of tweedehands).">
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Kangen Water Kopen — Ervaring, Prijs & Advies">
-  <meta property="og:description" content="Mijn 16+ jaar ervaring met Kangen water. Prijs, keuzes en advies om slim te starten.">
+  <meta charset="utf-8">
+  <title>Kangen Water kopen – Mijn persoonlijke ervaring sinds 2009</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sinds 2009 gebruik ik dagelijks een Kangen water machine. 16 jaar later nog steeds tevreden. Lees mijn ervaring en ontdek meer.">
+  <link rel="canonical" href="https://kangenwaterkopen.nl/">
+  <meta property="og:title" content="Kangen Water kopen – Mijn persoonlijke ervaring sinds 2009">
+  <meta property="og:description" content="Ik gebruik mijn Kangen water machine sinds 2009 – 16 jaar later werkt hij nog steeds dagelijks. Lees mijn ervaring en ontdek meer.">
+  <meta property="og:url" content="https://kangenwaterkopen.nl/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.kangenwaterkopen.nl/">
+  <meta property="og:locale" content="nl_NL">
+  <meta name="theme-color" content="#0b0f13">
 
   <style>
     :root{
-      --bg:#0c0d10; --fg:#f6f7fb; --muted:#b9bed1; --accent:#3fd0c9; --accent-2:#6ee7e0;
-      --card:#13151b; --line:#1e2230;
-      --max:1140px;
+      --bg: #0b0f13;
+      --surface: #10161c;
+      --card: #121922;
+      --border: #1c2631;
+      --fg: #e8eef3;
+      --muted:#a8b3bd;
+      --accent:#58c4ff;
+      --accent-2:#20a4f3;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --maxw: 980px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    img{max-width:100%;display:block}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{opacity:.9}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-    .btn{display:inline-block;padding:14px 20px;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#0b1213;font-weight:700;box-shadow:0 8px 24px rgba(63,208,201,.25);transition:transform .08s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn.outline{background:transparent;border:1px solid var(--accent);color:var(--fg)}
-    .muted{color:var(--muted)}
-    .badge{display:inline-block;font-size:.75rem;letter-spacing:.06em;padding:6px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:rgba(255,255,255,.02)}
-    .grid{display:grid;gap:24px}
-    @media(min-width:900px){.grid-2{grid-template-columns:1.05fr .95fr}}
-
-    /* Header */
-    header{position:sticky;top:0;z-index:40;background:rgba(12,13,16,.6);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
-    .nav a{color:var(--fg);font-weight:600}
-    .nav .right{display:flex;gap:12px;align-items:center}
-
-    /* Hero */
-    .hero{position:relative;isolation:isolate}
-    .hero::before{
-      content:"";position:absolute;inset:0;z-index:-2;
-      background:url('assets/1-kangenwaterkopenervaring.png') center/cover no-repeat;
-      filter:brightness(.65) saturate(1.05);
-    }
-    .hero::after{
-      content:"";position:absolute;inset:0;z-index:-1;
-      background:linear-gradient(180deg, rgba(12,13,16,.35), rgba(12,13,16,.85) 70%, var(--bg) 100%);
-    }
-    .hero .wrap{padding:96px 20px 72px}
-    .hero h1{font-size:clamp(28px,5vw,48px);line-height:1.1;margin:12px 0 16px}
-    .hero p{max-width:720px}
-
-    /* Sections met visual + copy */
-    section.section{padding:64px 0;border-top:1px solid var(--line)}
-    .card{
-      background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden
-    }
-    .card .media{aspect-ratio:16/9;background:#0f1117}
-    .card .body{padding:22px}
-    h2{font-size:clamp(22px,3.2vw,32px);line-height:1.2;margin:0 0 8px}
-    h3{margin:0 0 8px}
-    .kicker{font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
-
-    /* Footer */
-    footer{border-top:1px solid var(--line);padding:42px 0;color:var(--muted)}
-    .footgrid{display:grid;gap:16px;align-items:center}
-    @media(min-width:800px){.footgrid{grid-template-columns:1fr auto auto}}
-    .tiny{font-size:.85rem}
-
-    /* Smooth scroll */
     html{scroll-behavior:smooth}
-
-    /* Small helper for image-only sections */
-    .cover{position:relative;min-height:360px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#0f1117}
-    .cover img{width:100%;height:100%;object-fit:cover;filter:saturate(1.02)}
-    .cover .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,13,16,.0),rgba(12,13,16,.65));}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;
+      color:var(--fg);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(40,120,255,.12), transparent 60%),
+        radial-gradient(1400px 700px at 120% 10%, rgba(120,210,255,.10), transparent 60%),
+        var(--bg);
+      line-height:1.65;
+    }
+    /* Topbar */
+    .topbar{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(140%) blur(8px);
+      background:linear-gradient(to bottom, rgba(10,14,18,.85), rgba(10,14,18,.6));
+      border-bottom:1px solid var(--border);
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:14px}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .nav{margin-left:auto;display:flex;gap:14px;flex-wrap:wrap}
+    .nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
+    .nav a:hover{color:var(--fg);background:rgba(255,255,255,.05)}
+    /* Hero */
+    .hero{max-width:var(--maxw);margin:34px auto 10px;padding:0 20px}
+    .eyebrow{color:var(--muted);font-size:14px;letter-spacing:.2px;margin:0 0 6px}
+    h1{font-size:clamp(30px,5vw,46px);margin:6px 0 10px;line-height:1.15}
+    .subtitle{color:var(--muted);margin:0 0 16px}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 22px}
+    .badge{background:rgba(255,255,255,.04);border:1px solid var(--border);color:var(--muted);
+      padding:6px 10px;border-radius:999px;font-size:13px}
+    .hero-img{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .hero-img img{display:block;width:100%;height:auto}
+    /* Cards grid */
+    .grid{max-width:var(--maxw);margin:10px auto 60px;padding:0 20px;display:grid;gap:18px}
+    @media(min-width:900px){ .grid{grid-template-columns:1fr 1fr} }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
+      padding:20px;
+    }
+    .card h2{font-size:clamp(20px,3vw,26px);margin:0 0 10px}
+    .card p{margin:10px 0}
+    .img{border-radius:14px;overflow:hidden;border:1px solid var(--border);margin:12px 0}
+    .img img{display:block;width:100%;height:auto}
+    ul{margin:10px 0 4px 18px}
+    li{margin:6px 0}
+    /* Full-width CTA */
+    .cta-card{
+      grid-column:1/-1;
+      background:linear-gradient(180deg, rgba(35,45,60,.7), rgba(20,26,34,.9));
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:26px;
+      text-align:center
+    }
+    .cta-btn{
+      display:inline-block;margin-top:12px;
+      background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      color:#071119;text-decoration:none;font-weight:800;
+      border-radius:12px;padding:14px 18px;box-shadow:0 10px 22px rgba(32,164,243,.25)
+    }
+    .cta-btn:hover{transform:translateY(-1px)}
+    footer{max-width:var(--maxw);margin:0 auto 60px;padding:0 20px;color:var(--muted);font-size:14px}
+    .hr{height:1px;background:var(--border);margin:26px 0}
   </style>
-</head>
 
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Kangen Water kopen – Mijn persoonlijke ervaring sinds 2009",
+    "inLanguage":"nl-NL",
+    "author":{"@type":"Person","name":"Ervaringsdeskundige (anoniem)"},
+    "publisher":{"@type":"Organization","name":"KangenWaterKopen.nl"},
+    "datePublished":"2009-01-01",
+    "dateModified":"2025-09-15",
+    "mainEntityOfPage":"https://kangenwaterkopen.nl/"
+  }
+  </script>
+</head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="wrap nav">
-      <a href="#top" class="badge">Kangen Water Kopen</a>
-      <nav class="right">
-        <a href="#ervaring">Ervaring</a>
-        <a href="#prijzen">Prijzen</a>
-        <a href="#starten" class="btn">Gratis advies</a>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="brand">KangenWaterKopen.nl</div>
+      <nav class="nav">
+        <a href="#begin">Hoe het begon</a>
+        <a href="#lessen">16 jaar later</a>
+        <a href="#prijs">Prijs</a>
+        <a href="#marktplaats">Marktplaats?</a>
+        <a href="#scepsis">Scepsis</a>
+        <a href="#cta">Zelf ontdekken</a>
       </nav>
     </div>
-  </header>
+  </div>
 
   <!-- Hero -->
-  <main id="top" class="hero">
-    <div class="wrap">
-      <span class="badge">Sinds 2009 — 200+ mensen geholpen</span>
-      <h1>Meer energie, herstel en focus — mijn 16+ jaar met Kangen&nbsp;water</h1>
-      <p class="muted">
-        In 2009 ontdekte ik als fanatiek kitesurfer Kangen water in de VS. Het verschil voelde ik meteen:
-        meer kracht en uithoudingsvermogen. Op deze pagina deel ik wat werkt, de huidige prijzen
-        en hoe jij slim kunt starten (nieuw of tweedehands).
-      </p>
-      <p style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn" href="#prijzen">Bekijk prijzen</a>
-        <a class="btn outline" href="#starten">Plan gratis advies</a>
-      </p>
+  <section class="hero">
+    <p class="eyebrow">Persoonlijke getuigenis · sinds 2009</p>
+    <h1>Mijn ervaring met Kangen Water kopen in Nederland</h1>
+    <p class="subtitle">In 2009 kwam ik tijdens een kite-surftrip in de Verenigde Staten voor het eerst in aanraking met Kangen water. Als fanatiek sporter merkte ik vrijwel direct het verschil: meer kracht, meer uithoudingsvermogen, sneller herstel. Dat moment overtuigde me – ik besloot een van de eerste machines in Nederland (en waarschijnlijk zelfs in Europa) te kopen. Nu, 16 jaar later, staat dezelfde machine nog steeds in mijn keuken en doet hij dagelijks zijn werk.</p>
+    <div class="badges">
+      <span class="badge">200+ gebruikers in mijn netwerk</span>
+      <span class="badge">16 jaar persoonlijke ervaring</span>
+      <span class="badge">Geen medische claims</span>
     </div>
-  </main>
-
-  <!-- Ervaring / Hoe het begon -->
-  <section id="ervaring" class="section">
-    <div class="wrap grid grid-2">
-      <div class="card">
-        <div class="media"><img src="assets/2-hoehetbegon.png" alt="Hoe het begon"></div>
-        <div class="body">
-          <div class="kicker">Hoofdstuk 1</div>
-          <h2>Hoe het begon (2009)</h2>
-          <p class="muted">
-            Eerste slok, direct verschil. Ik kocht als één van de eersten in NL een machine en begon mijn ervaringen te documenteren
-            tijdens intensieve sportweken en in het dagelijks leven.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="media"><img src="assets/3-watikhebgeleerd.png" alt="Wat ik heb geleerd"></div>
-        <div class="body">
-          <div class="kicker">Hoofdstuk 2</div>
-          <h2>Wat ik heb geleerd</h2>
-          <p class="muted">
-            Hydratatie is niet alleen “meer drinken” — het gaat om opneembaarheid.
-            In mijn netwerk heb ik met therapeuten en sporters getest wat in de praktijk verschil maakt.
-          </p>
-        </div>
-      </div>
+    <div class="hero-img">
+      <img src="/assets/1-kangenwaterkopenervaring.png" alt="Waterapparaat met glas water op een licht keukenblad in natuurlijk daglicht.">
     </div>
   </section>
 
-  <!-- Netwerk & samenwerking -->
-  <section class="section">
-    <div class="wrap grid grid-2">
-      <div class="card">
-        <div class="media"><img src="assets/4-netwerkensamenwerking.png" alt="Netwerk en samenwerking"></div>
-        <div class="body">
-          <div class="kicker">Samen beter</div>
-          <h2>Netwerk & samenwerking</h2>
-          <p class="muted">
-            Jarenlang organiseerde ik demo’s en infomomenten. Zo hielp ik >200 mensen naar de juiste keuze,
-            mét eerlijke vergelijking met osmose/vitalisatie en zonder harde sales.
-          </p>
-        </div>
-      </div>
+  <!-- Cards -->
+  <section class="grid">
 
-      <div class="cover">
-        <img src="assets/1-kangenwaterkopenervaring.png" alt="Kangen water ervaring">
-        <div class="overlay"></div>
+    <!-- Card 1 -->
+    <article id="begin" class="card">
+      <h2>Een Kangen water apparaat kopen – hoe het begon</h2>
+      <div class="img"><img src="/assets/2-hoehetbegon.png" alt="Kitesurf-uitrusting op het strand met een fles water als symbool voor de eerste ervaring in 2009."></div>
+      <p>Toen ik mijn eerste apparaat kocht, twijfelde ik of het de investering waard zou zijn. Toch gaf mijn ervaring na de eerste slokken water de doorslag.</p>
+      <p>Al snel wilden vrienden en kennissen het water ook proeven. Ik begon demo’s te geven, organiseerde info-avonden en kwam in gesprek met andere gezondheidspioniers. Wat begon als een persoonlijke aankoop groeide uit tot een beweging.</p>
+    </article>
+
+    <!-- Card 2 -->
+    <article id="lessen" class="card">
+      <h2>16 jaar later: wat ik heb geleerd</h2>
+      <div class="img"><img src="/assets/3-watikhebgeleerd.png" alt="Detail van een waterapparaat en glas water; focus op jarenlange dagelijkse inzet."></div>
+      <ul>
+        <li>Mijn machine draait al zestien jaar dagelijks.</li>
+        <li>In de eerste vijf jaar hielp ik <strong>200+ mensen</strong> aan hun eigen apparaat.</li>
+        <li>Gebruikers geven consistent terug dat ze tevreden zijn over de jaren heen.</li>
+        <li>De grootste verrassing is de <strong>duurzaamheid</strong>: dit is geen wegwerp-filter, maar een langetermijnsysteem.</li>
+      </ul>
+      <p>Onderweg sprak ik veel professionals in de natuurlijke en holistische hoek. We keken niet naar “wondermiddelen”, maar naar kleine, dagelijkse verbeteringen: zachtere thee en koffie, groente die zichtbaar beter schoon wordt, en vooral het gevoel van goede hydratatie in training en herstel.</p>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card">
+      <h2>Van aankoop naar netwerk & samenwerking</h2>
+      <div class="img"><img src="/assets/4-netwerkensamenwerking.png" alt="Kleine groep mensen aan een houten tafel met glazen water in warm daglicht."></div>
+      <p>In de eerste jaren ontmoette ik veel therapeuten, trainers en holistische professionals. Samen onderzochten we hoe water mensen kan helpen om gezonder en fitter te leven.</p>
+      <p>Het ging nooit om wondermiddelen, maar om kleine, dagelijkse verbeteringen: smaak, hydratatie, herstel en gemak in de keuken.</p>
+    </article>
+
+    <!-- Card 4 -->
+    <article id="prijs" class="card">
+      <h2>De prijs van een Kangen water machine</h2>
+      <div class="img"><img src="/assets/5-prijsvaneenkangenwatermachine.png" alt="Stapel muntjes naast een glas water als symbool voor investering en waarde over tijd."></div>
+      <p>Veel mensen vragen: <em>wat kost een Kangen water apparaat?</em> De prijs ligt hoger dan bij standaard waterfilters, maar de waarde zit in duurzaamheid en betrouwbaarheid.</p>
+      <p>Mijn eigen machine draait na 16 jaar nog steeds. Uitgesmeerd over jaren dagelijks gebruik wordt de investering verrassend betaalbaar.</p>
+    </article>
+
+    <!-- Card 5 -->
+    <article id="marktplaats" class="card">
+      <h2>Kangen water bestellen of tweedehands kopen?</h2>
+      <div class="img"><img src="/assets/6-bestellenoftweedehandskopen.png" alt="Vergelijking tussen tweedehands en nieuw product; focus op garantie en betrouwbaarheid."></div>
+      <p>Sommigen zoeken naar “Kangen water machine Marktplaats”. Ik begrijp dat, maar tweedehands kent risico’s: geen garantie, geen service en vaak onduidelijke herkomst.</p>
+      <p>Bestellen via de officiële kanalen betekent zekerheid: fabrieksgarantie, service en authenticiteit.</p>
+    </article>
+
+    <!-- Card 6 -->
+    <article id="scepsis" class="card">
+      <h2>Over scepsis, “kwakzalverij” en negatieve verhalen</h2>
+      <div class="img"><img src="/assets/7-waaromikditverhaaldeel.png" alt="Iemand leest een artikel op laptop met glas water ernaast; bedachtzame sfeer."></div>
+      <p>Als je online zoekt op “Kangen water kopen” vind je ook kritiek. Termen als “kwakzalverij” duiken op, vaak gericht op overdreven claims.</p>
+      <p>Mijn kijk: ik gebruik het water dagelijks sinds 2009; mijn machine werkt nog steeds betrouwbaar; en meer dan 200 mensen in mijn netwerk zijn tevreden gebruikers. Er is onderzoek naar waterstofrijk water en antioxidatieve effecten — het veld is in ontwikkeling.</p>
+      <p>De ervaring zelf is leidend. Wie het water langere tijd drinkt, merkt het verschil.</p>
+    </article>
+
+    <!-- Card 7 -->
+    <article class="card">
+      <h2>Waarom ik dit verhaal deel</h2>
+      <div class="img"><img src="/assets/7-waaromikditverhaaldeel.png" alt="Iemand leest een artikel op laptop met glas water ernaast; bedachtzame sfeer."></div>
+      <p>Lange tijd deelde ik mijn ervaring vooral offline. Maar toen ik steeds vaker negatieve berichten online zag, besloot ik mijn verhaal neer te schrijven.</p>
+      <p>Niet om te overtuigen met grote claims, maar om een authentieke stem toe te voegen aan het gesprek — gebaseerd op 16 jaar gebruik.</p>
+    </article>
+
+    <!-- CTA (full width) -->
+    <article id="cta" class="cta-card">
+      <h2>Klaar om zelf te ontdekken?</h2>
+      <div class="img" style="max-width:780px;margin:12px auto">
+        <img src="/assets/8-klaaromzelfteontdekken.png" alt="Helder water dat in een glas wordt geschonken op een zonnige tafel; uitnodigende call-to-action.">
       </div>
-    </div>
+      <p>Als dit resoneert en je wilt verder kijken, ga dan via de onderstaande knop naar de officiële productinformatie en bestelomgeving.</p>
+      <a class="cta-btn" href="#EWS-LINK#" target="_blank" rel="nofollow noopener">Bekijk de officiële Enagic productpagina</a>
+    </article>
+
   </section>
 
-  <!-- Prijzen -->
-  <section id="prijzen" class="section">
-    <div class="wrap">
-      <div class="card">
-        <div class="media"><img src="assets/5-prijsvaneenkangenwatermachine.png" alt="Prijzen Kangen"></div>
-        <div class="body">
-          <div class="kicker">Transparant</div>
-          <h2>Prijzen & keuzes</h2>
-          <p class="muted">
-            De meest gekozen modellen (zoals de K8) liggen doorgaans tussen €3.000–€5.000 incl. btw, afhankelijk van
-            actueel aanbod en accessoires. Ik help je precies bepalen wat bij jouw situatie past.
-          </p>
-          <p class="tiny muted">
-            Tip: tweedehands kan interessant zijn als je herkomst, onderhoud en platen-conditie kunt verifiëren.
-          </p>
-          <p style="margin-top:12px">
-            <a class="btn" href="#starten">Gratis prijscheck & advies</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bestellen of tweedehands -->
-  <section class="section">
-    <div class="wrap grid grid-2">
-      <div class="card">
-        <div class="media"><img src="assets/6-bestellenoftweedehandskopen.png" alt="Bestellen of tweedehands"></div>
-        <div class="body">
-          <div class="kicker">Slim starten</div>
-          <h2>Nieuw, lease of tweedehands?</h2>
-          <p class="muted">
-            Ik loop met je door de opties (garantie, service, afschrijving, restwaarde) en geef je een eerlijk advies.
-            Doel: maximale waarde, minimale ruis.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="media"><img src="assets/7-waaromikditverhaaldeel.png" alt="Waarom ik dit deel"></div>
-        <div class="body">
-          <div class="kicker">Waarom</div>
-          <h2>Waarom ik dit deel</h2>
-          <p class="muted">
-            Ik ben geen “snelle verkoper”. Dit is iets wat mijn sport, herstel en energie al jaren ondersteunt.
-            Als het voor jou past, help ik je graag goed en veilig starten.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to action -->
-  <section id="starten" class="section">
-    <div class="wrap grid grid-2">
-      <div class="card">
-        <div class="media"><img src="assets/8-klaaromzelfteontdekken.png" alt="Klaar om te ontdekken"></div>
-        <div class="body">
-          <div class="kicker">Volgende stap</div>
-          <h2>Klaar om zelf te ontdekken?</h2>
-          <p class="muted">
-            Plan een kort gesprek (15 min). We checken je doel, situatie en budget. Daarna heb je helderheid:
-            wel/niet doen, en zo ja: welke keuze.
-          </p>
-          <p style="display:flex;gap:12px;flex-wrap:wrap">
-            <a class="btn" href="mailto:info@kangenwaterkopen.nl?subject=Gratis%20advies%20—%20Kangen%20Water">Mail voor advies</a>
-            <a class="btn outline" href="#prijzen">Bekijk eerst de prijzen</a>
-          </p>
-          <p class="tiny muted">Geen nieuwsbrief-spam. Gewoon eerlijk advies.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="body">
-          <h3>Veelgestelde vragen</h3>
-          <details><summary>Is dit wetenschappelijk bewezen?</summary>
-            <p class="muted">Ik deel je neutrale bronnen + mijn praktijkervaring. We kijken wat relevant is voor jouw doel.</p>
-          </details>
-          <details><summary>Hoe onderhoud ik een machine?</summary>
-            <p class="muted">Korte periodieke cleaning + jaarlijkse check. Ik geef je een simpel onderhoudsprotocol mee.</p>
-          </details>
-          <details><summary>Kan ik later doorverkopen?</summary>
-            <p class="muted">Ja, er is een actieve tweedehandsmarkt. Staat en onderhoud bepalen de restwaarde.</p>
-          </details>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <div class="wrap footgrid">
-      <div class="tiny">© <span id="y"></span> Kangen Water Kopen — advies op basis van 16+ jaar praktijkervaring.</div>
-      <div class="tiny"><a href="#top">Naar boven ↑</a></div>
-      <div class="tiny">Contact: <a href="mailto:info@kangenwaterkopen.nl">info@kangenwaterkopen.nl</a></div>
-    </div>
+    <div class="hr"></div>
+    © <span id="y"></span> KangenWaterKopen.nl · Persoonlijke ervaring sinds 2009 · Geen medische claims · Voor productinfo en aankoop verwijs ik naar de officiële Enagic-pagina.
   </footer>
 
   <script>
-    // Jaar in footer
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
