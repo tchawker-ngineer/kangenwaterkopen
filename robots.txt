@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kangenwaterkopen.nl/sitemap.xml
